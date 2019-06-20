@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Uw-KP-4eM">
+                                <rect key="frame" x="0.0" y="433" width="414" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mde-cO-huo">
+                                <rect key="frame" x="20" y="483" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="clickedBtnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7C-6f-SLm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uft-9V-3nY">
+                                <rect key="frame" x="74" y="483" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="clickedBtnUpdate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mZ-BI-OTE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXP-eU-CMF">
+                                <rect key="frame" x="145" y="483" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="clickedBtnDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H7R-Om-ydO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-hc-zJO">
+                                <rect key="frame" x="210" y="483" width="30" height="30"/>
+                                <state key="normal" title="Find"/>
+                                <connections>
+                                    <action selector="clickedBtnFind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jrj-Nm-GEc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx0-ri-HhL">
+                                <rect key="frame" x="260" y="483" width="56" height="30"/>
+                                <state key="normal" title="FetchAll"/>
+                                <connections>
+                                    <action selector="clickedBtnFetchAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4T-Nb-IFA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZXP-eU-CMF" firstAttribute="top" secondItem="8Uw-KP-4eM" secondAttribute="bottom" constant="20" id="1YV-XX-W3L"/>
+                            <constraint firstItem="8Uw-KP-4eM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9rv-xa-J7B"/>
+                            <constraint firstItem="Mde-cO-huo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dgt-lx-6Uo"/>
+                            <constraint firstItem="Mde-cO-huo" firstAttribute="top" secondItem="8Uw-KP-4eM" secondAttribute="bottom" constant="20" id="HET-TG-KZr"/>
+                            <constraint firstItem="Cx0-ri-HhL" firstAttribute="leading" secondItem="7oX-hc-zJO" secondAttribute="trailing" constant="20" id="HhM-TO-rxN"/>
+                            <constraint firstItem="8Uw-KP-4eM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NJT-Vt-MeU"/>
+                            <constraint firstItem="Uft-9V-3nY" firstAttribute="leading" secondItem="Mde-cO-huo" secondAttribute="trailing" constant="20" id="QBY-3L-pQa"/>
+                            <constraint firstItem="7oX-hc-zJO" firstAttribute="leading" secondItem="ZXP-eU-CMF" secondAttribute="trailing" constant="20" id="S5v-9n-IOh"/>
+                            <constraint firstItem="Uft-9V-3nY" firstAttribute="top" secondItem="8Uw-KP-4eM" secondAttribute="bottom" constant="20" id="dPj-yB-ed0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Uw-KP-4eM" secondAttribute="trailing" id="fy8-tO-8iJ"/>
+                            <constraint firstItem="7oX-hc-zJO" firstAttribute="top" secondItem="8Uw-KP-4eM" secondAttribute="bottom" constant="20" id="ijp-aG-0CD"/>
+                            <constraint firstItem="ZXP-eU-CMF" firstAttribute="leading" secondItem="Uft-9V-3nY" secondAttribute="trailing" constant="20" id="mxO-Av-3IW"/>
+                            <constraint firstItem="8Uw-KP-4eM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oiF-HD-soP"/>
+                            <constraint firstItem="Cx0-ri-HhL" firstAttribute="top" secondItem="8Uw-KP-4eM" secondAttribute="bottom" constant="20" id="uC6-Np-SMi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="8Uw-KP-4eM" id="iPc-nM-V1D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
